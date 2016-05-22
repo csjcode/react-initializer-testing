@@ -6,11 +6,15 @@ import App from '../../src/components/app'; // import component being tested
 /* Describe: groups together similar tests
 - the string is nothing special, can be 'Test App Component' etc.
 - may be easier to keep track of by using the same component being tested*/
-describe('App')
+describe('App',() => {
 
-// It: Group one single test of target
-// in this case we just want to test if the string "React Simple Starter" is rendered
-it('shows the correct text');
+   // It: Group one single test of target
+   // in this case we just want to test if the string "React Simple Starter" is rendered
 
-// expect: make an 'assertion' (reasonable belief that belief about target is true) about the target
-expect
+   it('shows the correct text',() => {
+
+      // expect: make an 'assertion' (reasonable belief that belief about target is true) about the target
+      expect
+      
+   });
+});
