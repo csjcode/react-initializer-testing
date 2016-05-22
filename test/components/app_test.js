@@ -1,14 +1,16 @@
-import { renderComponent , expect } from '../test_helper';
-import App from '../../src/components/app';
+import { renderComponent , expect } from '../test_helper'; // import test helper functions (needed for testing)
+import App from '../../src/components/app'; // import component being tested
 
-describe('App' , () => {
-  let component;
+// 3 important keywords needed for the testing in this file - describe, it, expect
 
-  beforeEach(() => {
-    component = renderComponent(App);
-  });
+/* Describe: groups together similar tests
+- the string is nothing special, can be 'Test App Component' etc.
+- may be easier to keep track of by using the same component being tested*/
+describe('App')
 
-  it('renders something', () => {
-    expect(component).to.exist;
-  });
-});
+// It: Group one single test of target
+// in this case we just want to test if the string "React Simple Starter" is rendered
+it('shows the correct text');
+
+// expect: make an 'assertion' (reasonable belief that belief about target is true) about the target
+expect
