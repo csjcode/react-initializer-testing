@@ -2,6 +2,7 @@ import { renderComponent , expect } from '../test_helper'; // import test helper
 import App from '../../src/components/app'; // import component being tested
 
 // to run this: npm run test:watch
+// watch will automatically update the test results when the file changes
 
 // 3 important keywords needed for the testing in this file - describe, it, expect
 
