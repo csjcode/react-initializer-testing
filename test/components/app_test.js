@@ -11,18 +11,16 @@ import App from '../../src/components/app'; // import component being tested
 - may be easier to keep track of by using the same component being tested*/
 describe('App',() => {
 
-   // It: Group one single test of target
-   // in this case we just want to test if the string "React simple starter" is rendered
+   let component;
 
-   it('shows the correct text',() => {
+   beforeEach(() => {
 
-      // create an instance of App - renderComponent is one of the helpers already set up in test_helper
-      const component = renderComponent(App);
+      component = renderComponent(App);
 
-      // expect: make an 'assertion' (reasonable belief that belief about target is true) about the target
-      // .to.contain is a matcher
-      expect(component).to.contain('React simple starter')
+   })
 
+   it ('shows a comment box',() => {
+      expect(component.find('.comment-box')).to.exist;
    });
 
 });
