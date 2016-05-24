@@ -9,7 +9,7 @@ export default class CommentBox extends Component {
    }
 
    handleChange(event) {
-      // this.setState({ comment: event.target.value})
+      this.setState({ comment: event.target.value})
    }
 
    render() {
