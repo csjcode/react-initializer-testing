@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const CommentList = (props) => {
    return (
@@ -8,4 +9,4 @@ const CommentList = (props) => {
    );
 };
 
-export default CommentList
+export default connect()(CommentList);
