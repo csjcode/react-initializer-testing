@@ -5,6 +5,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils'; // React testing module
 import chai, { expect } from 'chai';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducers from '../src/reducers';
+
 
 // Setup testing environment to run like a browser in the command line.
 
@@ -15,9 +19,12 @@ const $ = _$(window); // assign $ to only work with this browser test configurat
 // Build, 'renderComponent' helper that should render a given
 
 function renderComponent(ComponentClass, props = {}, state = {}) { // spin off a copy of the component class name (ie CommentBox)
-  const componentInstance =  TestUtils.renderIntoDocument(<ComponentClass />); // handler from TestUtils library of React
-  return $(ReactDOM.findDOMNode(componentInstance)); // produces html
-}
+  const componentInstance =  TestUtils.renderIntoDocument( // handler from TestUtils library of React
+    <Provider store={createStore(reducers, state)}> // for Redux middleware
+      <ComponentClass {...props} />
+    </Provider>
+  );
+
 
 
 // Build helper for simulating events.
