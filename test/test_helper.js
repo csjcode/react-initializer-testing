@@ -4,6 +4,7 @@ import _$ from 'jquery'; // _$ needed to prevent jquery from alwys applying to b
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils'; // React testing module
+import chai, { expect } from 'chai';
 
 // Setup testing environment to run like a browser in the command line.
 
@@ -20,4 +21,7 @@ function renderComponent(ComponentClass, props = {}, state = {}) { // spin off a
 
 
 // Build helper for simulating events.
+
 // set up Chai jQuery
+
+export { renderComponent, expect};
